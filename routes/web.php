@@ -1,0 +1,56 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+/*
+Route::get('/', function () {
+    return view('Hola mundito');
+});*/
+
+/*
+Route::get('/', function(){
+    return [
+        'Clases' => [
+            'Instalacionde Laravel',
+            'Rutas Basicas de Laravel',
+            'Controllers de Laravel',
+            
+        ]
+    ];
+});
+*/
+
+Route::get('clases', function(){
+    return 'Aqui se listarian todas las clases';
+});
+
+Route::get('clases/crear', function(){
+    return 'Aqui se crean todas las clases';
+});
+
+Route::get('clases/{id}/editar', function($id){
+    return 'Aqui se edita la clase con id:' .$id;
+});
+
+
+Route::get('nota', function(){
+    return 'Aqui se listarian todas las nota';
+});
+
+Route::get('nota/crear', function(){
+    return 'Aqui se crean todas las nota';
+});
+
+Route::get('nota/{id}/editar', function($id){
+    return 'Aqui se edita la nota con id:' .$id;
+});
